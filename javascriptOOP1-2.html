@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JS OOP 1-2</title>
+    </head>
+    <body>
+        <script>
+            // Challenge 1
+            // Print all of the stundents and their cohort.
+            let students = [
+                {name: 'Remy', cohort: 'Jan'},
+                {name: 'Genevieve', cohort: 'March'},
+                {name: 'Chuck', cohort: 'Jan'},
+                {name: 'Osmund', cohort: 'June'},
+                {name: 'Nikki', cohort: 'June'},
+                {name: 'Boris', cohort: 'June'}
+
+            ];
+
+            console.log(students);
+            for(var key in students) {
+                console.log("Name:  " + students[key].name + ", Cohort: " + students[key].cohort);
+            };
+            // End of part I
+
+            // Challenge 2
+            // print out the below object to match the example.
+
+            let users = {
+                employees: [
+                    {'first_name':  'Miguel', 'last_name' : 'Jones'},
+                    {'first_name' : 'Ernie', 'last_name' : 'Bertson'},
+                    {'first_name' : 'Nora', 'last_name' : 'Lu'},
+                    {'first_name' : 'Sally', 'last_name' : 'Barkyoumb'}
+                ],
+                managers: [
+                   {'first_name' : 'Lillian', 'last_name' : 'Chambers'},
+                   {'first_name' : 'Gordon', 'last_name' : 'Poe'}dd
+                ]
+            };
+            console.log(users);
+
+            console.log("EMPLOYEES" + "\n");
+            for(var key in users.employees){
+                var name_length = users.employees[key].first_name.length + users.employees[key].last_name.length;
+                console.log(key + " - " + users.employees[key].last_name + ", " + users.employees[key].first_name + " " + name_length);
+            }
+            console.log("MANAGERS" + "\n");
+            for(var key in users.managers){
+                var name_length = users.managers[key].first_name.length + users.managers[key].last_name.length;
+                console.log(key + " - " + users.managers[key].last_name + ", " + users.managers[key].first_name + " " + name_length);
+            };
+        </script>
+    </body>
+</html>
